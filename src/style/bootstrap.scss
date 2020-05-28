@@ -1,0 +1,24 @@
+// Required
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+$theme-colors: (
+  "primary": #8338ec,
+  "light": #eff7f6,
+  "bp": $gray-900
+);
+
+// Optional
+@import "~bootstrap/scss/bootstrap";
+
+input,
+textarea,
+select {
+  outline: none;
+  box-shadow: none !important;
+  border: 1px solid #ccc !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700&display=swap');

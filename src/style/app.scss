@@ -1,0 +1,186 @@
+@import "./bootstrap.scss";
+@import "./palette.scss";
+@import "./mq.scss";
+
+body {
+  font-family: 'Baloo Chettan 2', cursive;
+  letter-spacing: 1px;
+
+  a {
+    color: $primary;
+
+    &:hover {
+      color: colorAlpha($primary, 0.8);
+    }
+  }
+}
+
+.sidebar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 230px;
+  height: 100%;
+  padding: 2em;
+  background-color: $dark;
+
+  @include md {
+    display: none;
+  }
+
+  .brand {
+    font-weight: 600;
+    font-size: 16pt;
+
+    span {
+      display: block;
+      font-weight: normal;
+      font-size: 11pt;
+      text-decoration: underline;
+    }
+  }
+
+  a, * {
+    color: colorAlpha($light, .9);
+  }
+
+  .list-group {
+    border-radius: 0;
+    margin-top: 1em;
+
+    .list-group-item {
+      padding: .75em 0;
+      border: 0;
+      font-weight: 600;
+      font-size: 11pt;
+      background-color: transparent;
+
+      a {
+        color: colorAlpha($light, .9);
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      .icon {
+        margin-right: .5em;
+      }
+
+      &.label {
+        margin-top: 1em;
+      }
+    }
+  }
+}
+
+.body-wrapper {
+  margin-left: 230px;
+
+  @include md {
+    margin-left: 0;
+  }
+
+  .content {
+    margin-bottom: 2em;
+  }
+}
+
+.table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.jumbotron {
+  background-color: colorAlpha($primary, .2);
+  color: $primary;
+  padding: 2.25em 2em;
+
+  &.for-non-fluid-body {
+    height: 300px;
+  }
+
+  @include md {
+    min-height: 300px;
+    height: auto;
+  }
+
+  .link-vertical {
+    margin-top: 3em;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include sm {
+      justify-content: center;
+    }
+
+    .link-item {
+      color: $primary;
+      font-weight: 600;
+      margin-right: 2em;
+
+      @include sm {
+        margin-right: 1em;
+        margin-top: .25em;
+      }
+    }
+
+    .icon {
+      margin-right: .5em;
+    }
+  }
+}
+
+.card {
+
+  &.card-content {
+    margin-top: -4em;
+    min-height: 400px;
+
+    @include sm {
+      margin-top: -6em;
+    }
+  }
+}
+
+.nav-tabs {
+  border-color: $primary;
+
+  .nav-link {
+    color: $primary;
+    font-weight: 600;
+
+    &:hover {
+      background-color: $primary;
+      color: $light;
+      border-color: $primary $primary transparent;
+    }
+
+    &.active {
+      color: $primary;
+      border-color: $primary $primary #ffffff;
+
+      &:hover {
+        background-color: transparent;
+        border-color: $primary $primary #ffffff;
+      }
+    }
+  }
+}
+
+.list-group {
+  .list-group-item {
+    &.active {
+      background-color: $primary;
+      border: 0;
+    }
+  }
+}
+
+.transition {
+  transition: .5;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,12 @@
+/* RGB */
+$primary: #8338ec;
+$danger: #e71d36;
+$warning: #ff9f1c;
+$dark: #011627;
+$light: #eff7f6;
+$black: #000000;
+$white: #FFFFFF;
+
+@function colorAlpha($RGBColor, $opacityLevel) {
+  @return rgba($RGBColor, $opacityLevel);
+}
